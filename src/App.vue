@@ -4,7 +4,9 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div>
-    <router-view />
+    <transition name="fade" mode="out-in">
+      <router-view />
+    </transition>
   </div>
 </template>
 
@@ -51,5 +53,19 @@ button {
   margin-top: 20px;
   border-radius: 2%;
   background-color: #e0e0e0;
+}
+
+/* Transition */
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity .5s ease-out;
+}
+
+.fade-leave-to {
+  opacity: 0;
 }
 </style>
