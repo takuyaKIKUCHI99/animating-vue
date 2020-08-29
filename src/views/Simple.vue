@@ -1,6 +1,5 @@
-
 <template>
-  <transition :css="false">
+  <transition appear @before-enter="beforeEnter" @enter="enter" :css="false">
     <div class="card"></div>
   </transition>
 </template>
@@ -8,13 +7,20 @@
 <script>
 import gsap from 'gsap'
 export default {
-  mounted() {
-    gsap.from('.card', {
-      duration: 1,
-      opacity: 0,
-      scale: 0,
-      ease: 'bounce.outut',
-    })
+  methods: {
+    beforeEnter(el) {
+      el.style.opacity = 0
+      el.style.transform = 'scale(0,0)'
+    },
+    enter(el, done) {
+      gsap.to(el, {
+        duration: 1,
+        opacity: 1,
+        scale: 1,
+        ease: 'bounce.inOut',
+        onComplete: done
+      })
+    }
   }
 }
 </script>

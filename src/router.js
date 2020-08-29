@@ -46,12 +46,12 @@ export default new Router({
       component: () =>
         import(/* webpackChunkName: "stagger" */ './views/Stagger.vue')
     },
-    // {
-    //   path: '/state',
-    //   name: 'state',
-    //   component: () =>
-    //     import(/* webpackChunkName: "state" */ './views/State.vue')
-    // },
+    {
+      path: '/state',
+      name: 'state',
+      component: () =>
+        import(/* webpackChunkName: "state" */ './views/State.vue')
+    },
     // {
     //   path: '/timeline',
     //   name: 'timeline',
