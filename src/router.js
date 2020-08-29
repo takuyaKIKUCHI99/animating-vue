@@ -28,12 +28,12 @@ export default new Router({
       component: () =>
         import(/* webpackChunkName: "list" */ './views/Drawer.vue')
     },
-    // {
-    //   path: '/cards',
-    //   name: 'cards',
-    //   component: () =>
-    //     import(/* webpackChunkName: "cards" */ './views/Cards.vue')
-    // },
+    {
+      path: '/master',
+      name: 'master',
+      component: () =>
+        import(/* webpackChunkName: "Master" */ './views/Master.vue')
+    },
     {
       path: '/simple',
       name: 'simple',

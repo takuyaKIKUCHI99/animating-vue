@@ -4,7 +4,7 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/list">List</router-link> |
       <router-link to="/drawer">Drawer</router-link> |
-      <router-link to="/cards">Cards</router-link> |
+      <router-link to="/master">Master</router-link> |
       <router-link to="/simple">Simple</router-link> |
       <router-link to="/stagger">Stagger</router-link> |
       <router-link to="/state">State</router-link> |
